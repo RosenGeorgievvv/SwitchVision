@@ -8,12 +8,12 @@ function App() {
   const [theme, setTheme] = useState('light');
   const toggleTheme = () => {
 
-    setTheme((curr) =>(curr === 'light' ? "dark" : "light"))
+    setTheme((curr) =>(curr === 'light' ? 'dark' : 'light'))
   }
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className="App" id='light'>
+      <div className="App" id={theme}>
         <Form />
       </div>
     </ThemeContext.Provider>
